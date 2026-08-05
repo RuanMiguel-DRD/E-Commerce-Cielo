@@ -1,4 +1,4 @@
-package ecommerce.cielo.config;
+package ecommerce.cielo;
 
 
 import lombok.AccessLevel;
