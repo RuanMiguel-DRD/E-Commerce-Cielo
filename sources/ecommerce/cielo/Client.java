@@ -27,14 +27,14 @@ public class Client {
 
     public Client(@NonNull Credentials auth, @NonNull Environment env, HttpClient client) {
 
-        // Cliente HTTP básico/padrão
+        // Basic/standard HTTP client
         if (client == null) {
             client = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(5))
                 .build();
         }
 
-        // Cabeçalho HTTP universal
+        // Universal HTTP header
         Builder request = HttpRequest.newBuilder()
             .headers(
                 "Accept", "application/json",
@@ -43,7 +43,7 @@ public class Client {
                 "MerchantKey", auth.getMerchantKey()
             );
 
-            Network net = new Network(client, request);
+        Network net = new Network(client, request);
 
         this.query = new Query(net, env.getUrlQuery());
         this.transactional = new Transactional(net, env.getUrlTransactional());
