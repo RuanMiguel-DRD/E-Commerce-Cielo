@@ -5,14 +5,18 @@ import lombok.NonNull;
 
 import java.net.http.HttpClient;
 
+import java.net.http.HttpRequest;
 import java.net.http.HttpRequest.Builder;
 
+import java.net.http.HttpResponse;
 
-// A ideia é que a classe Network sirva para:
-// Guardar o cliente HTTP que será usado nas requisições
-// Guardar o cabeçalho padrão da API da Cielo para reutilização
-// Tratamento de erros genéricos e comuns, como falta de acesso a internet, erro de timeout, entre outras coisas]
-// Problemas específicos de conexão ou uso incorreto da API, serão tratadas nos métodos das devidas classes, Query e Transactional
+import java.net.ConnectException;
+import java.net.UnknownHostException;
+import java.io.IOException;
+
+import ecommerce.cielo.api.web.NetworkResponse;
+
+
 public class Network {
 
     private final HttpClient client;
@@ -21,6 +25,34 @@ public class Network {
     public Network(@NonNull HttpClient client, @NonNull Builder request) {
         this.request = request;
         this.client = client;
+    }
+
+    public Builder getBuilder() {
+        return this.request;
+    }
+
+    public NetworkResponse<String> send(HttpRequest request) {
+
+        try {
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            return NetworkResponse.success(response);
+
+        } catch (ConnectException e) {
+            return NetworkResponse.error(NetworkError.CONNECTION_FAILED, e);
+
+        } catch (UnknownHostException e) {
+            return NetworkResponse.error(NetworkError.NO_INTERNET, e);
+
+        } catch (IOException e) {
+            return NetworkResponse.error(NetworkError.IO_ERROR, e);
+
+        // ? ? ?
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return NetworkResponse.error(NetworkError.INTERRUPTED, e);
+
+        }
+
     }
 
 }

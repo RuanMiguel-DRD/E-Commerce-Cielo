@@ -40,3 +40,9 @@
 [ ] Integração com banco de dados
 [ ] Revisão do gerenciador de dependências
 [ ] Realizar a publicação do pacote
+
+---
+
+# Módulo Web:
+[ ] Revisão do pacote web
+[ ] Adicionar tratamento de erros específicos de cada método da API
