@@ -1,4 +1,4 @@
-package ecommerce.cielo.api;
+package io.github.ruanmiguel.drd.ecommerce.cielo.api;
 
 
 import lombok.NonNull;
@@ -6,12 +6,11 @@ import lombok.NonNull;
 import java.net.URI;
 
 import java.net.http.HttpRequest;
-import java.net.http.HttpRequest.Builder;
 
-import ecommerce.cielo.api.web.Network;
-import ecommerce.cielo.api.web.NetworkResponse;
+import io.github.ruanmiguel.drd.ecommerce.cielo.api.web.Network;
+import io.github.ruanmiguel.drd.ecommerce.cielo.api.web.NetworkResponse;
 
-import ecommerce.cielo.internal.RegexCode;
+import io.github.ruanmiguel.drd.ecommerce.cielo.internal.RegexCode;
 
 
 public class Query {

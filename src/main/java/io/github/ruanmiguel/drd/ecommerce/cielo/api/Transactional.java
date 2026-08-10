@@ -1,7 +1,7 @@
-package ecommerce.cielo.api;
+package io.github.ruanmiguel.drd.ecommerce.cielo.api;
 
 
-import ecommerce.cielo.api.web.Network;
+import io.github.ruanmiguel.drd.ecommerce.cielo.api.web.Network;
 
 
 public class Transactional {

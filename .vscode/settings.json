@@ -1,6 +1,5 @@
 {
     "cSpell.language": "en, pt-BR",
-    "code-runner.executorMap": {
-        "java": "jbang run start"
-    }
+    "explorer.compactFolders": false,
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

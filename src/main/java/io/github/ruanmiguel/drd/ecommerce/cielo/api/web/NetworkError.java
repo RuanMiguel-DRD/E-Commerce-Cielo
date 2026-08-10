@@ -1,4 +1,4 @@
-package ecommerce.cielo.api.web;
+package io.github.ruanmiguel.drd.ecommerce.cielo.api.web;
 
 
 public enum NetworkError {

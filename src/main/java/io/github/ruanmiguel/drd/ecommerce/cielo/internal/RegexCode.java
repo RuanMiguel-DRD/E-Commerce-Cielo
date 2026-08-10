@@ -1,4 +1,4 @@
-package ecommerce.cielo.internal;
+package io.github.ruanmiguel.drd.ecommerce.cielo.internal;
 
 
 public final class RegexCode {

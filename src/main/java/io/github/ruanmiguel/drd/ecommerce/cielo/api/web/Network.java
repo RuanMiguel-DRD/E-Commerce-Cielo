@@ -1,20 +1,17 @@
-package ecommerce.cielo.api.web;
+package io.github.ruanmiguel.drd.ecommerce.cielo.api.web;
 
 
 import lombok.NonNull;
 
 import java.net.http.HttpClient;
-
-import java.net.http.HttpRequest;
-import java.net.http.HttpRequest.Builder;
-
 import java.net.http.HttpResponse;
+import java.net.http.HttpRequest;
+
+import java.net.http.HttpRequest.Builder;
 
 import java.net.ConnectException;
 import java.net.UnknownHostException;
 import java.io.IOException;
-
-import ecommerce.cielo.api.web.NetworkResponse;
 
 
 public class Network {

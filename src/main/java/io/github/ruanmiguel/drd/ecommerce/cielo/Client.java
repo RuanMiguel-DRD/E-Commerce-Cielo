@@ -1,19 +1,18 @@
-package ecommerce.cielo;
+package io.github.ruanmiguel.drd.ecommerce.cielo;
 
 
 import lombok.NonNull;
 
 import java.net.http.HttpClient;
-
 import java.net.http.HttpRequest;
+
 import java.net.http.HttpRequest.Builder;
 
 import java.time.Duration;
 
-import ecommerce.cielo.api.Query;
-import ecommerce.cielo.api.Transactional;
-
-import ecommerce.cielo.api.web.Network;
+import io.github.ruanmiguel.drd.ecommerce.cielo.api.Query;
+import io.github.ruanmiguel.drd.ecommerce.cielo.api.Transactional;
+import io.github.ruanmiguel.drd.ecommerce.cielo.api.web.Network;
 
 
 public class Client {

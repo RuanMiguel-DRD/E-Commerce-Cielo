@@ -1,4 +1,4 @@
-package ecommerce.cielo;
+package io.github.ruanmiguel.drd.ecommerce.cielo;
 
 
 import lombok.Getter;
@@ -6,8 +6,8 @@ import lombok.AccessLevel;
 
 import lombok.NonNull;
 
-import static ecommerce.cielo.internal.RegexCode.MERCHANT_ID;
-import static ecommerce.cielo.internal.RegexCode.MERCHANT_KEY;
+import static io.github.ruanmiguel.drd.ecommerce.cielo.internal.RegexCode.MERCHANT_ID;
+import static io.github.ruanmiguel.drd.ecommerce.cielo.internal.RegexCode.MERCHANT_KEY;
 
 
 @Getter(AccessLevel.PROTECTED)
